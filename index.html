@@ -1,15 +1,617 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.2/examples/carousel/ -->
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>COOPFASS</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .a-baixar-banner {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="./bootstrap/carousel.css" rel="stylesheet">
+    <style type="text/css">
+        .vue-notification-group {
+            display: block;
+            position: fixed;
+            z-index: 5000
+        }
+
+        .vue-notification-wrapper {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        .notification-title {
+            font-weight: 600
+        }
+
+        .vue-notification-template {
+            background: #fff
+        }
+
+        .vue-notification,
+        .vue-notification-template {
+            display: block;
+            box-sizing: border-box;
+            text-align: left
+        }
+
+        .vue-notification {
+            font-size: 12px;
+            padding: 10px;
+            margin: 0 5px 5px;
+            color: #fff;
+            background: #44a4fc;
+            border-left: 5px solid #187fe7
+        }
+
+        .vue-notification.warn {
+            background: #ffb648;
+            border-left-color: #f48a06
+        }
+
+        .vue-notification.error {
+            background: #e54d42;
+            border-left-color: #b82e24
+        }
+
+        .vue-notification.success {
+            background: #68cd86;
+            border-left-color: #42a85f
+        }
+
+        .vn-fade-enter-active,
+        .vn-fade-leave-active,
+        .vn-fade-move {
+            transition: all .5s
+        }
+
+        .vn-fade-enter,
+        .vn-fade-leave-to {
+            opacity: 0
+        }
+    </style>
+    <style type="text/css">
+        @font-face {
+            font-family: Roboto;
+            src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf");
+        }
+    </style>
 </head>
 
-<body>
-    <a href="./Carousel Template · Bootstrap v5.2.html">Clique Aqui e vá para o site</a>
+<body cz-shortcut-listen="true">
+    <script>
+
+    // document.designMode = "on";
+    </script>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">COOPFASS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#quem-somos">Quem Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#parceiros-voluntarios">Parceiros e Voluntarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#juntar">Juntar-se</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img class="img-fluid" src="./img/3.jpg" alt="">
+
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Nossas Atuações</h1>
+                            <p>A COOPFASS atua nos eixos de educação ambiental, reflorestamento, cooperativismo e energia sustentavel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img class="img-fluid" src="./img/1.jpg" alt="">
+
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>COOPFASS - COOPERATIVA FAMILIAR DE ENERGIA SOLAR</h1>
+                            <p>No caminho para o desenvolvimento sustentável. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="./img/2.jpg" alt="">
+
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>Seja Parceiro</h1>
+                            <p>Junte-se a nós como parceiro com a sua organização ou como voluntario</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <h1 class="text-center">Eixos de Atuação</h1>
+            <br><br><br>
+
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="./img/eucacaoambiental.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    </img>
+
+
+                    <h2 class="fw-normal">Educação Ambiental</h2>
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-lg-3 text-center">
+                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="./img/reflorestamento.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    </img>
+
+                    <h2 class="fw-normal">Reflorestamento</h2>
+
+
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3 text-center">
+                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="./img/cooperativismo.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    </img>
+
+                    <h2 class="fw-normal">Cooperativismo</h2>
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-lg-3 text-center">
+                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="./img/energiasustental.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    </img>
+
+                    <h2 class="fw-normal">Energia Sustentável</h2>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider" id="quem-somos">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Quem Somos?</h2>
+                    <br>
+                    <p class="lead">Somos a
+                        <strong> COOPFASS - COOPERATIVA FAMILIAR DE ENERGIA SOLAR</strong>,
+                        entidade sem fins lucrativos que tem por objetivo promover o desenvolvimento sustentável, produzir energia
+                        solar e de outras fontes renováveis a partir da aplicação de novas tecnologias, desenvolver e operar
+                        programas sociais de
+                        <strong> proteção e direitos ambientais e defesa dos direitos da natureza, educação ambiental, produção
+                            agroecológica </strong>
+                        em benefício de seus cooperados e da comunidade em geral. Atuamos no Estado de Rondônia, Brasil.
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" src="./img/2.jpg" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+                    </img>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Missão, Visão e Valores</h2>
+                    <br>
+
+                    <p class="lead"><strong>MISSAO: </strong> Ser a referência na produção e difusão do uso de energias
+                        sustentáveis, educação ambiental e preservação dos recursos
+                        naturais, envolvendo as pessoas na criação de um novo
+                        paradigma energético que beneficiará a sociedade e o ambiente.</p>
+                    <p class="lead"><strong>VISÃO: </strong> Construir uma metodologia replicável para apoiar o desenvolvimento
+                        sustentável de comunidades, por meio da energia solar, soluções
+                        sustentáveis, educação ambiental e novas tecnologias, articulando
+                        para um futuro social, ambiental e energeticamente sustentável</p>
+                </div>
+                <div class="col-md-5 d-flex flex-column justify-content-center">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" src="./img/1.jpg" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+                    </img>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Compromissos</h2>
+                    <br>
+                    <p class="lead">✓ 100% da eletricidade de fontes renováveis.</p>
+                    <p class="lead">✓ Mínimo ou nenhum impacto ambiental</p>
+                    <p class="lead">✓ Valor social</p>
+                    <p class="lead">✓ Desenvolvimento local</p>
+                    <p class="lead">✓ Transparência e integridade </p>
+                </div>
+                <div class="col-md-5 order-md-1 d-flex flex-column justify-content-center">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" src="./img/3.jpg" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+                    </img>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider" id="parceiros-voluntarios">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Sobre Parceiros e Apoiadores</h2>
+                    <br>
+                    <p class="lead">Os parceiros são fundamentais para a COOPFASS existir.</p>
+                    <p class="lead">Uma <strong> solução estrutural sustentável </strong> para quem mais precisa não pode
+                        ser criada sozinha, afinal, a cooperação é A UNICA FORMA DE
+                        SUPERAR A</p>
+                    <p class="lead"><i><strong>Agradecemos muito a todos vocês!</strong></i></p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" src="./img/2.jpg" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+                    </img>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Seja Voluntário</h2>
+                    <br>
+                    <p class="lead">
+                        Você que é ou é estudante de comunicação, instalador solar, eletricista,
+                        marketing, educador(a), professor(a), pedagoga(o), engenheiro ambiental,
+                        direito, artesão, cidadã(o), ...
+                        <i><strong>Você pode fazer a diferença!</strong></i>
+                    </p>
+
+                    <p class="lead">Ajude a promover o
+                        <strong>desenvolvimento sustentável através da
+                            energia solar, cooperativismo, educação ambiental,
+                            reflorestamento</strong> .
+                        Seja um voluntário da COOPFASS e contribua
+                        para um mundo mais inclusivo e sustentável.
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" src="./img/1.jpg" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+                    </img>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider" id="juntar">
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/Cópia de Brochura para paisagismo funcional com hortifruti verde (1)_page-0001.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Cópia de Brochura para paisagismo funcional com hortifruti verde (1)_page-0002.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/WhatsApp Image 2022-11-27 at 16.06.14.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <button class="btn btn-success"><a href="/PDF/Cópia de Brochura para paisagismo funcional com hortifruti verde (1).pdf" class="a-baixar-banner">Baixar banner</a></button>
+            <hr class="featurette-divider">
+            <!-- /END THE FEATURETTES -->
+
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <div class="container d-flex justify-content-around">
+
+            <div class="d-flex justify-content-center">
+
+                <div class="">
+
+                    <div>
+                        <h1 class="text-center">Quero Ser um Parceiro</h1>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Nome da Organização</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Organização...">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Tipo de Organização</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Cooperativa">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@dominio.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlTextarea1" class="form-label">Sua mensagem</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Olá" rows="4"></textarea>
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Enviar
+                            </button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">COOPFASS| Parcerias</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        Ficamos muito felizes com seu interesse em ser um parceiro nosso!
+                                        Queremos saber um pouco mais sobre você e a organização que você
+                                        representa.
+                                        Assim que possível, entraremos em contato!
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="">
+                    <h1 class="text-center">Quero Ser um Voluntário</h1>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="João da Silva">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@dominio.com">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">WhatsApp</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(12) 12345-1234">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label">Sua mensagem</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Olá" rows="4"></textarea>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Enviar
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">COOPFASS| Manifestação de Interesse para
+                                        Voluntariado</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    Ficamos muito felizes com seu interesse em participar da nossa equipe!
+                                    As informações deste formulário irão para o banco de dados de
+                                    interessados em voluntariar na COOPFASS. Assim que possível,
+                                    entraremos em contato via e-mail e/ou WhatsApp.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <br><br><br><br>
+
+        <footer class="bg-light text-center text-lg-center position-relative">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Transparência</h5>
+                        <br>
+
+                        <p><a href="#">Prestação de contas</a></p>
+                        <p><a href="#">Atas de assembleias</a></p>
+                        <p><a href="#">Participação de eventos</a></p>
+                        <p><a href="#">Relatórios de atividades</a></p>
+                        <p><a href="#">Contratos e parcerias</a></p>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Contato</h5>
+                        <br>
+
+                        <p>Linha 200 – Km 41 – Lote 121B</p>
+                        <p>Vale do Paraiso - Rondônia</p>
+                        <p>CONTATO: coopfass@outlook.com</p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3 position-absolute" style="background-color: rgba(0, 0, 0, 0.2); width:100%;">
+                <strong> COOPFASS - COOPERATIVA FAMILIAR DE ENERGIA SOLAR E SOLUÇÕES SUSTENTÁVEIS</strong>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+
+
+
 </body>
 
 </html>
