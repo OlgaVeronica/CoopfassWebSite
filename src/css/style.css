@@ -1,6 +1,6 @@
 body {
   /* font-family: 'Nunito Sans', sans-serif; */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif,  'Roboto', serif ;
 } 
 
 
@@ -167,8 +167,8 @@ body {
 .signed-out-hero .hero-media-asset {
   position: absolute;
   height: 100vh;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out
 }
 
 .signed-out-hero .hero-media-asset.is-hidden {
@@ -229,4 +229,71 @@ body {
 .fundo-escuro{
   background: #10100E;
   color: #D7D9D4;
+}
+
+.titulo-secao{
+  text-transform: uppercase;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.eixos-atuacao{
+  font-size: x-large;
+  font-weight: 300;
+}
+
+.eixos-elementos{
+  position: relative;
+}
+
+.barra-lateral{
+  background: rgb(158 158 167 / 40%);
+  position: absolute;
+  display: inline-block;
+  height: 200px;
+  width: 1px;
+}
+
+@media (max-width: 768px){
+  .eixos-elementos{
+    padding-top: 2rem !important;
+  }
+}
+@media (max-width: 993px) {
+  .barra-meio{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .barra-lateral{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .barra-lateral{
+    left: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .barra-lateral{
+    left: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .barra-lateral{
+    left: 300px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .barra-lateral{
+    left: 350px;
+  }
+}
+
+.img-eixos{
+  filter: invert(13%) sepia(10%) saturate(698%) hue-rotate(169deg) brightness(84%) contrast(93%);
 }
