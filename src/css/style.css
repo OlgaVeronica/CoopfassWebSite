@@ -113,3 +113,8 @@ body {
 .img-eixos{
   filter: invert(40%) sepia(56%) saturate(661%) hue-rotate(48deg) brightness(89%) contrast(82%);
 }
+
+.registro-ocb{
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}

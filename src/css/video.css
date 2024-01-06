@@ -94,7 +94,7 @@
   .signed-out-hero {
     -ms-flex-direction:column;
     flex-direction: column;
-    height: 560px
+    /* height: 560px */
   }
 }
 
