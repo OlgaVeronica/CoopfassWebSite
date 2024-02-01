@@ -6,13 +6,27 @@
   --back-ice: #ededed;
   --font-gray: #333;
   --font-green: #4d9f00;
+  --scroll-track: #F8CA0F;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--font-green); 
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: rgb(158 158 158 / 50%);
+}
 body {
   /* font-family: 'Nunito Sans', sans-serif; */
   font-family: 'Roboto', sans-serif,  'Roboto', serif ;
 } 
-
 .fundo-claro{
   background: var(--back-white);
   color: var(--font-black);
@@ -52,8 +66,8 @@ body {
 .eixos-atuacao{
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  padding-top: 3px;
+  font-weight: 500;
+  color: var(--font-black);
 }
 
 .eixos-elementos{
@@ -111,10 +125,42 @@ body {
 }
 
 .img-eixos{
-  filter: invert(40%) sepia(56%) saturate(661%) hue-rotate(48deg) brightness(89%) contrast(82%);
+  /* filter: invert(40%) sepia(56%) saturate(661%) hue-rotate(48deg) brightness(89%) contrast(82%); */
+  filter: invert(76%) sepia(21%) saturate(1035%) hue-rotate(47deg) brightness(78%) contrast(98%);
 }
 
 .registro-ocb{
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
+}
+
+.sub-titulo{
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-gray);
+  text-transform: uppercase;
+  font-weight: 300;
+  display: block;
+  text-align: center;
+}
+.sub-titulo::before{
+  content: "- ";
+  font-weight: 200;
+}
+
+.sub-titulo::after{
+  content: " -";
+  font-weight: 200;
+}
+
+.quem-somos{
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: 'Poppins';
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+.proposito{
+  
 }
