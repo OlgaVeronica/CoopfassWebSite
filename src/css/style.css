@@ -1,12 +1,16 @@
 @charset "UTF-8";
 
 :root {
+  --white-text: #fff;
   --back-white: #F2F2F2;
   --font-black: #10100E;
   --back-ice: #ededed;
   --font-gray: #333;
   --font-green: #4d9f00;
   --scroll-track: #F8CA0F;
+  /* --card-background: #f1bcff5c; */
+  --card-background: #6115754a;
+  --card-background-hover: #ffffffe0;
 }
 
 .li-mod{
@@ -16,7 +20,7 @@
 }
 
 .li-mod::marker{
-  /* margin: 0 .5rem 0 0; */
+  margin: 0 .5rem 0 0;
   color: var(--back-white);
 }
 
@@ -194,14 +198,16 @@ body {
 
 .card-proposito{
   height: 100%;
-  color: #fff;
-  background-color: #f1bcff5c !important;
+  color: var(--white-text);
+  background-color: var(--card-background) !important;
   border: none !important;
 }
 
 .card-proposito:hover{
   color: var(--font-black);
-  background-color: #ffffffe0 !important;
+  background-color: var(--card-background-hover) !important;
+  box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,.2);
+
 }
 
 .card-proposito:hover .li-mod{
@@ -211,4 +217,8 @@ body {
 
 .card-proposito:hover .li-mod::marker{
   color: var(--font-green);
+}
+
+.texto-proposito{
+  font-weight: 600;
 }
