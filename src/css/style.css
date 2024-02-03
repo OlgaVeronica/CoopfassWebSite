@@ -288,8 +288,17 @@ body {
   }
 } */
 
-@media (max-width: 600){
-.card-compromisso{
-  max-width: none;
+@media (max-width: 860px){
+
+.no-overflow{
+  padding-top: 10px;
+  position: absolute;
+  width: 100%;
+}
+.conteudo-compromissos{
+  margin-top: 12rem !important;
+}
+.card-pair-img {
+  border-radius: 0px;
 }
 }
