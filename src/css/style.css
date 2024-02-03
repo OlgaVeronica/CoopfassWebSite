@@ -7,6 +7,7 @@
   --back-ice: #ededed;
   --font-gray: #333;
   --font-green: #4d9f00;
+  --font-light-dark: #ABAEA3;
   --scroll-track: #F8CA0F;
   /* --card-background: #f1bcff5c; */
   --card-background: #6115754a;
@@ -50,8 +51,10 @@ body {
 }
 
 .fundo-escuro{
-  background: var(--back-ice);
-  color: var(--font-gray);
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(20,7,0,1) 100%);
+  color: var(--font-light-dark);
+  font-family: 'Poppins';
 }
 
 .ante-titulo{
@@ -277,28 +280,40 @@ body {
 .no-overflow{
   overflow: hidden;
   position: relative;
-  /* right: 1px; */
   left: auto;
   height: 100%; 
 }
 
-/* @media (max-width: 515px){
-  .barra-1{
-    display: none;
-  }
-} */
-
 @media (max-width: 860px){
+  
+  .no-overflow{
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+  }
+  .conteudo-compromissos{
+    margin-top: 12rem !important;
+  }
+  .card-pair-img {
+    border-radius: 0px;
+  }
+}
 
-.no-overflow{
-  padding-top: 10px;
-  position: absolute;
-  width: 100%;
+.external-link::after{
+  font-weight: 200;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15px' height='15px' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19' stroke='%23ABAEA3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
-.conteudo-compromissos{
-  margin-top: 12rem !important;
+
+.icon-email{
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='20px' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7' stroke='%23ABAEA3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='3' y='5' width='18' height='14' rx='2' stroke='%23ABAEA3' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+ font-size: inherit;
 }
-.card-pair-img {
-  border-radius: 0px;
+
+.link-footer{
+  text-decoration: none;
+  color: var(--font-light-dark);
 }
+
+.link-footer:hover{
+  text-decoration: underline;
 }
