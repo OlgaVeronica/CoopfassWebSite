@@ -9,6 +9,18 @@
   --scroll-track: #F8CA0F;
 }
 
+.li-mod{
+  list-style: circle;
+  font-family: 'Poppins'; 
+  font-weight: 200;
+}
+
+.li-mod::marker{
+  /* margin: 0 .5rem 0 0; */
+  color: var(--back-white);
+}
+
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -161,6 +173,42 @@ body {
   text-align: justify;
 }
 
-.proposito{
-  
+.section-proposito{
+  /* background: url(../img/hands.jpg); */
+  background: linear-gradient(319deg, rgba(12,78,0,1) 0%, rgba(0,155,148,1) 44%, rgba(255,252,0,1) 100%, rgba(255,252,0,1) 100%);
+  /* background-attachment: fixed; */
+  /* background-repeat: no-repeat; */
+  background-size: 100dvw auto;
+  background-position-y: 10;
+  padding: 5% 6% 5% 6%;
+}
+
+#proposito{
+  font-family: 'Poppins';
+}
+
+#proposito p{
+  font-size: large;
+  font-weight: 300;
+}
+
+.card-proposito{
+  height: 100%;
+  color: #fff;
+  background-color: #f1bcff5c !important;
+  border: none !important;
+}
+
+.card-proposito:hover{
+  color: var(--font-black);
+  background-color: #ffffffe0 !important;
+}
+
+.card-proposito:hover .li-mod{
+  list-style: disc;
+  font-weight: 300;
+}
+
+.card-proposito:hover .li-mod::marker{
+  color: var(--font-green);
 }
