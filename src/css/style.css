@@ -17,7 +17,7 @@
 
 .li-mod{
   list-style: circle;
-  font-family: 'Poppins'; 
+   
   font-weight: 200;
 }
 
@@ -43,7 +43,7 @@
 }
 body {
   /* font-family: 'Nunito Sans', sans-serif; */
-  font-family: 'Roboto', sans-serif,  'Roboto', serif ;
+  font-family: 'Poppins', sans-serif,  'Poppins', serif ;
 } 
 .fundo-claro{
   background: var(--back-white);
@@ -54,7 +54,6 @@ body {
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(20,7,0,1) 100%);
   color: var(--font-light-dark);
-  font-family: 'Poppins';
 }
 
 .ante-titulo{
@@ -149,11 +148,6 @@ body {
   filter: invert(76%) sepia(21%) saturate(1035%) hue-rotate(47deg) brightness(78%) contrast(98%);
 }
 
-.registro-ocb{
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-}
-
 .sub-titulo{
   font-family: 'Poppins', sans-serif;
   color: var(--font-gray);
@@ -175,7 +169,7 @@ body {
 .quem-somos{
   font-size: 1.5rem;
   font-weight: 300;
-  font-family: 'Poppins';
+  
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: justify;
@@ -192,7 +186,7 @@ body {
 }
 
 #proposito{
-  font-family: 'Poppins';
+  
 }
 
 #proposito p{
@@ -228,7 +222,7 @@ body {
 }
 
 .card-compromisso{
-  font-family: 'Poppins';
+  
   font-size: larger;
   font-weight: 300;
   border: none;
@@ -316,4 +310,41 @@ body {
 
 .link-footer:hover{
   text-decoration: underline;
+}
+
+.container-x{
+  padding-bottom: 0 !important;;
+}
+
+.grid{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 865px){
+  .img-ocb{
+    display: none;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+    margin: 30px
+  }
+  .registro-ocb{
+    font-size: 30px;
+  }
+}
+
+.registro-ocb{
+  font-size: 40px;
+}
+
+.registro-ocb p{
+  font-weight: 600;
+}
+
+.registro-ocb span{
+  /* font-family: 'Nunito Sans', sans-serif;; */
+  text-align: left;
+  font-weight: 200;
 }
