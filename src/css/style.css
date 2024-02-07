@@ -322,6 +322,35 @@ nav .nav-link{
 
 /* end registro-ocb */
 
+
+/* start participe */
+
+.participe{
+  font-size: 1.5rem;
+  font-weight: 300;
+  
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+/* end participe */
+
+
+/* start map */
+
+.map-location{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#map{
+  height: 50dvh;
+}
+
+
+/* end map */
+
 /* start footer */
 
 .fundo-escuro{
