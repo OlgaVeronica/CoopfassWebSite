@@ -1,0 +1,77 @@
+.grid-container {
+  display: grid;
+  /* grid-template-columns: 3fr 1fr 1fr 1fr; */
+  gap: 1rem;
+  max-width: 1200px;
+  /* grid-template-rows: 100%; */
+}
+
+/* @media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+  }
+} */
+
+.grid-container h5 {
+  font-size: 1rem;
+}
+
+.grid-container p,
+a {
+  font-size: 0.87rem;
+}
+
+.logo-social-links {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
+}
+
+.logo-footer {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.logo-footer img {
+  height: 13rem;
+  width: 22rem;
+}
+
+.saiba-mais {
+  grid-column: 2;
+  width: 12.5rem;
+}
+
+.endereço {
+  grid-column: 3;
+  grid-row: 1;
+  width: 12.5rem;
+}
+
+.contato {
+  grid-column: 4;
+  grid-row: 1;
+  width: 12.5rem;
+}
+
+.social-links {
+  text-align: center;
+  padding-right: 1rem;
+}
+
+.social-links a {
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 1.87rem;
+  height: 1.87rem;
+}
